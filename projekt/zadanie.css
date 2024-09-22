@@ -1,0 +1,115 @@
+/* Resetowanie marginesów i wypełnień */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Nagłówek ostrzegawczy */
+.notatka {
+    background-color: yellow;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Główna sekcja nagłówka */
+.naglowek {
+    background-color: teal;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Pasek nawigacyjny */
+.navigationbar {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+.navigationbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.navigationbar a:hover {
+    text-decoration: underline;
+}
+
+/* Główna sekcja strony z siatką (Grid) */
+.pojemnik {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Sidebar: 1 część, zawartość: 3 części */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Stylizacja dla sekcji bocznej */
+.pasekboczny {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Obrazki w sidebarze */
+.pasekboczny .zdjecie img,
+.pasekboczny .obrazek img {
+    width: 100%;          /* Obrazki w sidebarze dopasowane do szerokości kontenera */
+    height: auto;          /* Zachowanie proporcji obrazu */
+    margin-bottom: 15px;   /* Odstęp między obrazkami */
+    border-radius: 5px;    /* Delikatne zaokrąglenie rogów */
+}
+
+/* Stylizacja dla głównej zawartości */
+.zawartosc {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Obrazy w głównej zawartości */
+.zawartosc .duzy-obrazek img {
+    width: 100%;    /* Obrazki w treści zajmują całą szerokość kontenera */
+    height: auto;   /* Zachowanie proporcji obrazka */
+    margin-bottom: 15px;
+    border-radius: 5px;  /* Delikatne zaokrąglenie rogów */
+}
+
+/* Tytuły i tekst */
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+small {
+    color: gray;
+    display: block;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Responsywność dla urządzeń mobilnych */
+@media screen and (max-width: 768px) {
+    .pojemnik {
+        grid-template-columns: 1fr;  /* Jedna kolumna na małych ekranach */
+    }
+
+    .navigationbar a {
+        display: block;  /* Linki w nawigacji w pionie */
+        margin: 10px 0;
+    }
+}
+
+
+
+
